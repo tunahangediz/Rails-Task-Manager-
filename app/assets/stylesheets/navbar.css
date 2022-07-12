@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  padding: 1.4rem 2.2rem 1.3rem 2.2rem;
+  justify-content: space-between;
+
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+}
+
+.navbar-brand {
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  margin-left: 1rem;
+}
+
+.brand-collapse a {
+  margin-right: 1rem;
+  color: #677eea;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav-link {
+  color: #848686;
+  font-weight: 700;
+}
+.nav-link:hover {
+  color: #19191a;
+}

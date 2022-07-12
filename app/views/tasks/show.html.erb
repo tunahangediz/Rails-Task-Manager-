@@ -1,0 +1,22 @@
+<div class="show-task d-flex justify-center mt-4">
+
+    <div class="task-wrapper" >
+        <div class="d-flex justify-between align-center">
+            <h2 class="task-h2"><%=@task.content%> </h2>
+            <div class="show-icons d-flex justify-between"> 
+
+            <%=button_to  destroy_task_path(@task) , method: :delete , class:"delete-btn-edit", form_class: "myButton" do%>
+                 <i class="ri-delete-bin-line bin"></i>
+            <% end %>
+
+            <%=link_to edit_task_path do %><i class="ri-edit-line edit"></i>  <% end %>   
+            </div>
+        </div>
+
+        <h4 class="task-h4">Created By: <%=@task.creator.email.split("@").first%> </h4>
+        
+    
+    
+    </div>
+
+</div>

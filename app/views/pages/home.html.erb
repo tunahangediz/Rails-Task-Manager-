@@ -1,0 +1,33 @@
+
+    
+<div class="d-flex justify-center w-100">
+<div class="wrapper">
+<table id="customers">
+
+  <thead>
+    <tr>
+      <th>Pending Task</th>
+      <th>Created At</th>
+      <th>Completed</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% if current_user %>
+     <%current_user.tasks.each do |task|%> 
+    <%= render 'shared/task', task:task %>
+   <% end %>  
+    
+  <% end %>
+  
+ 
+  
+</table>
+
+
+ </div>
+
+
+
+
+</div>
+ 

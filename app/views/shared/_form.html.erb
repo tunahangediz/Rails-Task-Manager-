@@ -1,0 +1,17 @@
+<%= form_with model: task  do |f| %>
+
+    <%if task.errors.any?%>
+    <%task.errors.full_messages.each do |msg|%>
+        <div> <%=msg%></div>
+    <% end %>
+    <% end %>
+  <div style="margin-bottom:1rem">
+    <%= f.label :content %>
+    <br>
+    
+    <%= f.text_field :content %>
+  </div>
+  <div >
+    <%= f.submit "Add Todo", class:'btn' %>
+  </div>
+<% end %>

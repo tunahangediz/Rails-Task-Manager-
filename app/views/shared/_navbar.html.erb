@@ -1,0 +1,46 @@
+<nav class = "navbar">  
+     <div class="brand-collapse">
+      <%=link_to "Todos", root_path, class:"navbar-brand"%>
+      <%=link_to "+ Add", tasks_new_path, class:"add-todo-btn"%>
+     </div>
+   
+    <ul>
+
+    <% if current_user %>
+            <li><%=link_to root_path do%>
+            <%=current_user.email.split("@")[0]%>
+
+        <% end %> 
+        
+        </li>
+      
+    <% end %>
+
+
+        
+
+        
+        
+            <%if current_user %>
+            <li>
+                <%=button_to destroy_user_session_path, method: :delete do%><p class="nav-link">Logout</p><% end %>
+
+            </li>
+            <% else %>
+                <li>
+                <%=link_to new_user_session_path do%><p class="nav-link">Login</p><% end %>
+                </li>
+                <li>
+                <%=link_to new_user_registration_path do%><p class="nav-link">Sign Up</p><% end %>
+                </li>
+                
+            <% end %>
+             
+
+       
+        
+        </li>
+    </ul>
+
+
+</nav>

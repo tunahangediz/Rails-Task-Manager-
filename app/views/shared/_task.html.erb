@@ -1,0 +1,30 @@
+
+ 
+      <tr>
+         <td style="font-weight:700;" ><%=link_to  show_task_path(task) do%> 
+         <%=task.content%> <% end %>  
+         </td>
+         <td style="color: #a5aab0;"><%=task.created_at.to_s.split(" ").first%> </td>
+         <td><%=button_to update_task_path(task) , method: :patch , style:"margin-left:1.8rem" do%>
+                <% if !task.completed %>
+                     <div class="check-box" id="check-box">
+                    ✓
+                     </div>
+                     <% else %>
+                      <div class="check-box check-box-active" id="check-box">
+                    ✓
+                </div>
+                  
+                <% end %>
+               
+             <% end %>
+         </td>
+         <td><%=button_to  destroy_task_path(task), class:"delete-btn" , method: :delete do%>
+         <i class="ri-delete-bin-line bin"></i>
+         <% end %>
+         
+         </td>
+      </tr>
+    
+
+  

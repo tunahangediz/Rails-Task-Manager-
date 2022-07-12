@@ -1,0 +1,26 @@
+<h1>update_task_two</h1>
+
+
+
+<section class="task-new-section">
+
+    <div class="task-input d-flex justify-center">
+        <%= form_with model: @task , url:update_task_two_path(@task) ,method: :put do |f| %>
+
+    <%if @task.errors.any?%>
+    <%@task.errors.full_messages.each do |msg|%>
+        <div> <%=msg%></div>
+    <% end %>
+    <% end %>
+  <div style="margin-bottom:1rem">
+    <%= f.label :content %>
+    <br>
+    
+    <%= f.text_field :content %>
+  </div>
+  <div >
+    <%= f.submit "Update Todo", class:'btn'%>
+  </div>
+<% end %>
+    </div>
+</section>

@@ -179,3 +179,45 @@ button {
 .check-box-active {
   background-color: rgb(0, 132, 255);
 }
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  margin: 3rem 0.5rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.form-header a {
+  color: #5568d4;
+  font-weight: 600;
+}
+.field {
+  max-width: 400px;
+  width: 100%;
+}
+.field label {
+  max-width: 400px;
+  width: 100%;
+  color: #374251;
+}
+.field input {
+  all: unset;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.6rem 0;
+}
+.devise-h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #374251;
+}

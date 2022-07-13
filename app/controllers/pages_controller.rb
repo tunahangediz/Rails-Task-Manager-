@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_task!
+  before_action :authenticate_user! 
   def home
 
     @tasks = Task.all
